@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Apni Shirt | Men's Fashion</title>
+  <meta
+    name="description"
+    content="Explore casual, formal and linen shirts at Apni Shirt."
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <p>APNI SHIRT — STYLE FOR EVERY DAY</p>
+      <p>Frontend demo store</p>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-content">
+
+      <a href="index.html" class="logo" aria-label="Apni Shirt home">
+        Apni<span>Shirt</span>
+      </a>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        hidden
+      >
+        ☰
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link active" aria-current="page">
+          Home
+        </a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <form
+        class="search-form"
+        id="searchForm"
+        action="shop.html"
+        method="get"
+        role="search"
+      >
+        <label for="searchInput">Search shirts</label>
+
+        <div class="search-field">
+          <input
+            type="search"
+            id="searchInput"
+            name="q"
+            placeholder="Search for shirts..."
+            maxlength="100"
+          >
+
+          <button type="submit" aria-label="Search">
+            Search
+          </button>
+        </div>
+      </form>
+
+      <a href="cart.html" class="cart-link">
+        Cart
+        <span id="cartCount" aria-live="polite">0</span>
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / BANNER -->
+    <section class="hero" aria-label="Featured collections">
+      <div class="hero-slider" id="heroSlider">
+
+        <article class="hero-slide active" data-slide="0">
+          <div class="container hero-content">
+
+            <div class="hero-text" data-animate="slide-right">
+              <p class="eyebrow">MEN'S FASHION</p>
+
+              <h1>
+                Style That<br>
+                Speaks For <span>You</span>
+              </h1>
+
+              <p class="hero-description">
+                Find your next favourite shirt for work,
+                weekends and everything in between.
+              </p>
+
+              <a href="shop.html" class="btn btn-primary">
+                Shop Now <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="hero-image" data-animate="slide-left">
+              <img
+                src="images/banners/hero-navy.jpg"
+                alt="Model wearing a navy casual shirt"
+                width="800"
+                height="700"
+                fetchpriority="high"
+              >
+            </div>
+
+          </div>
+        </article>
+
+        <article class="hero-slide" data-slide="1" hidden>
+          <div class="container hero-content">
+
+            <div class="hero-text">
+              <p class="eyebrow">THE CASUAL COLLECTION</p>
+              <h2>Good Style.<br>Every Day.</h2>
+
+              <p class="hero-description">
+                Discover relaxed shirts for your everyday wardrobe.
+              </p>
+
+              <a href="shop.html?category=casual" class="btn btn-primary">
+                Explore Casual <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="hero-image">
+              <img
+                src="images/banners/hero-casual.jpg"
+                alt="Model wearing a light blue casual shirt"
+                width="800"
+                height="700"
+                loading="lazy"
+              >
+            </div>
+
+          </div>
+        </article>
+
+        <article class="hero-slide" data-slide="2" hidden>
+          <div class="container hero-content">
+
+            <div class="hero-text">
+              <p class="eyebrow">THE FORMAL EDIT</p>
+              <h2>A Sharper Look.<br>Your Own Way.</h2>
+
+              <p class="hero-description">
+                Explore clean colours and classic shirt styles.
+              </p>
+
+              <a href="shop.html?category=formal" class="btn btn-primary">
+                Explore Formal <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="hero-image">
+              <img
+                src="images/banners/hero-formal.jpg"
+                alt="Model wearing a white formal shirt"
+                width="800"
+                height="700"
+                loading="lazy"
+              >
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+
+      <!-- JS tayyar hone par controls show karna -->
+      <div class="slider-controls" id="sliderControls" hidden>
+        <button type="button" id="prevSlide" aria-label="Previous slide">
+          ←
+        </button>
+
+        <div class="slider-dots" aria-label="Choose banner">
+          <button
+            type="button"
+            class="slider-dot active"
+            data-slide-to="0"
+            aria-label="Show banner 1"
+            aria-pressed="true"
+          ></button>
+
+          <button
+            type="button"
+            class="slider-dot"
+            data-slide-to="1"
+            aria-label="Show banner 2"
+            aria-pressed="false"
+          ></button>
+
+          <button
+            type="button"
+            class="slider-dot"
+            data-slide-to="2"
+            aria-label="Show banner 3"
+            aria-pressed="false"
+          ></button>
+        </div>
+
+        <button type="button" id="nextSlide" aria-label="Next slide">
+          →
+        </button>
+      </div>
+    </section>
+
+    <!-- QUICK LINKS -->
+    <section class="features" aria-label="Explore the store">
+      <div class="container features-grid">
+
+        <a href="shop.html" class="feature-item" data-animate="fade-up">
+          <span class="feature-icon" aria-hidden="true">⌕</span>
+          <div>
+            <h3>Find Your Style</h3>
+            <p>Explore the shirt collection</p>
+          </div>
+        </a>
+
+        <a href="shop.html?category=casual"
+           class="feature-item"
+           data-animate="fade-up">
+          <span class="feature-icon" aria-hidden="true">◇</span>
+          <div>
+            <h3>Everyday Casual</h3>
+            <p>Discover relaxed looks</p>
+          </div>
+        </a>
+
+        <a href="shop.html?category=formal"
+           class="feature-item"
+           data-animate="fade-up">
+          <span class="feature-icon" aria-hidden="true">□</span>
+          <div>
+            <h3>Formal Edit</h3>
+            <p>Find your next smart look</p>
+          </div>
+        </a>
+
+        <a href="cart.html" class="feature-item" data-animate="fade-up">
+          <span class="feature-icon" aria-hidden="true">+</span>
+          <div>
+            <h3>Your Shopping Bag</h3>
+            <p>Review your selected shirts</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="section featured-products" id="featuredProducts">
+      <div class="container">
+
+        <div class="section-heading" data-animate="fade-up">
+          <div>
+            <p class="eyebrow">THE SHIRT EDIT</p>
+            <h2>Featured Products</h2>
+          </div>
+
+          <a href="shop.html" class="text-link">
+            View All <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <p class="demo-note">Sample products and prices.</p>
+
+        <div class="product-grid" id="featuredProductGrid">
+
+          <!-- PRODUCT 1 -->
+          <article
+            class="product-card"
+            data-product-id="1"
+            data-animate="fade-up"
+          >
+            <a href="product.html?id=1" class="product-image">
+              <img
+                src="images/shirts/oxford-olive.jpg"
+                alt="Olive green Oxford shirt"
+                width="450"
+                height="550"
+                loading="lazy"
+              >
+            </a>
+
+            <div class="product-info">
+              <p class="product-category">Casual</p>
+
+              <h3>
+                <a href="product.html?id=1">Classic Oxford Shirt</a>
+              </h3>
+
+              <p class="product-price">Rs. 4,290</p>
+
+              <a href="product.html?id=1" class="btn btn-product">
+                Choose Options
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 2 -->
+          <article
+            class="product-card"
+            data-product-id="2"
+            data-animate="fade-up"
+          >
+            <a href="product.html?id=2" class="product-image">
+              <img
+                src="images/shirts/linen-blue.jpg"
+                alt="Light blue linen shirt"
+                width="450"
+                height="550"
+                loading="lazy"
+              >
+            </a>
+
+            <div class="product-info">
+              <p class="product-category">Linen</p>
+
+              <h3>
+                <a href="product.html?id=2">Premium Linen Shirt</a>
+              </h3>
+
+              <p class="product-price">Rs. 4,990</p>
+
+              <a href="product.html?id=2" class="btn btn-product">
+                Choose Options
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 3 -->
+          <article
+            class="product-card"
+            data-product-id="3"
+            data-animate="fade-up"
+          >
+            <a href="product.html?id=3" class="product-image">
+              <img
+                src="images/shirts/casual-black.jpg"
+                alt="Black casual shirt"
+                width="450"
+                height="550"
+                loading="lazy"
+              >
+            </a>
+
+            <div class="product-info">
+              <p class="product-category">Casual</p>
+
+              <h3>
+                <a href="product.html?id=3">Slim Fit Casual Shirt</a>
+              </h3>
+
+              <p class="product-price">Rs. 3,990</p>
+
+              <a href="product.html?id=3" class="btn btn-product">
+                Choose Options
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 4 -->
+          <article
+            class="product-card"
+            data-product-id="4"
+            data-animate="fade-up"
+          >
+            <a href="product.html?id=4" class="product-image">
+              <img
+                src="images/shirts/cotton-white.jpg"
+                alt="White formal cotton shirt"
+                width="450"
+                height="550"
+                loading="lazy"
+              >
+            </a>
+
+            <div class="product-info">
+              <p class="product-category">Formal</p>
+
+              <h3>
+                <a href="product.html?id=4">Solid Cotton Shirt</a>
+              </h3>
+
+              <p class="product-price">Rs. 4,490</p>
+
+              <a href="product.html?id=4" class="btn btn-product">
+                Choose Options
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 5 -->
+          <article
+            class="product-card"
+            data-product-id="5"
+            data-animate="fade-up"
+          >
+            <a href="product.html?id=5" class="product-image">
+              <img
+                src="images/shirts/flannel-checked.jpg"
+                alt="Blue checked flannel shirt"
+                width="450"
+                height="550"
+                loading="lazy"
+              >
+            </a>
+
+            <div class="product-info">
+              <p class="product-category">Casual</p>
+
+              <h3>
+                <a href="product.html?id=5">Checked Flannel Shirt</a>
+              </h3>
+
+              <p class="product-price">Rs. 4,290</p>
+
+              <a href="product.html?id=5" class="btn btn-product">
+                Choose Options
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 6 -->
+          <article
+            class="product-card"
+            data-product-id="6"
+            data-animate="fade-up"
+          >
+            <a href="product.html?id=6" class="product-image">
+              <img
+                src="images/shirts/textured-beige.jpg"
+                alt="Beige textured casual shirt"
+                width="450"
+                height="550"
+                loading="lazy"
+              >
+            </a>
+
+            <div class="product-info">
+              <p class="product-category">Casual</p>
+
+              <h3>
+                <a href="product.html?id=6">Textured Casual Shirt</a>
+              </h3>
+
+              <p class="product-price">Rs. 3,990</p>
+
+              <a href="product.html?id=6" class="btn btn-product">
+                Choose Options
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LIFESTYLE BANNER -->
+    <section class="collection-banner" aria-labelledby="collectionTitle">
+      <div class="container collection-banner-content">
+
+        <div class="collection-banner-text" data-animate="slide-right">
+          <p class="eyebrow">MODERN ESSENTIALS</p>
+
+          <h2 id="collectionTitle">
+            Better Shirts.<br>
+            Bigger <span>Dreams.</span>
+          </h2>
+
+          <p>Build your everyday wardrobe, one favourite shirt at a time.</p>
+
+          <a href="shop.html" class="btn btn-primary">
+            Shop Collection <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="collection-banner-image" data-animate="slide-left">
+          <img
+            src="images/banners/collection-banner.jpg"
+            alt="Model wearing a navy shirt in a relaxed outdoor setting"
+            width="900"
+            height="650"
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section categories" id="categories">
+      <div class="container">
+
+        <div class="section-heading" data-animate="fade-up">
+          <h2>Shop by Category</h2>
+        </div>
+
+        <div class="category-grid">
+
+          <a
+            href="shop.html?category=casual"
+            class="category-card"
+            data-animate="fade-up"
+          >
+            <img
+              src="images/shirts/category-casual.jpg"
+              alt="Casual shirt collection"
+              width="600"
+              height="700"
+              loading="lazy"
+            >
+
+            <div class="category-content">
+              <h3>Casual Shirts</h3>
+              <span>Shop Casual →</span>
+            </div>
+          </a>
+
+          <a
+            href="shop.html?category=formal"
+            class="category-card"
+            data-animate="fade-up"
+          >
+            <img
+              src="images/shirts/category-formal.jpg"
+              alt="Formal shirt collection"
+              width="600"
+              height="700"
+              loading="lazy"
+            >
+
+            <div class="category-content">
+              <h3>Formal Shirts</h3>
+              <span>Shop Formal →</span>
+            </div>
+          </a>
+
+          <a
+            href="shop.html?category=linen"
+            class="category-card"
+            data-animate="fade-up"
+          >
+            <img
+              src="images/shirts/category-linen.jpg"
+              alt="Linen shirt collection"
+              width="600"
+              height="700"
+              loading="lazy"
+            >
+
+            <div class="category-content">
+              <h3>Linen Shirts</h3>
+              <span>Shop Linen →</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about-section" id="about">
+      <div class="container" data-animate="fade-up">
+        <p class="eyebrow">ABOUT APNI SHIRT</p>
+        <h2>Your Style. Your Shirt.</h2>
+
+        <p>
+          Apni Shirt is a frontend learning project featuring a sample
+          collection of casual, formal and linen shirts. Explore products,
+          choose your options and try the demo shopping experience.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+
+        <div class="section-heading" data-animate="fade-up">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>How do I select a shirt size?</summary>
+            <p>
+              Open a product page, select an available size and colour,
+              then add the shirt to your cart.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I change the quantity in my cart?</summary>
+            <p>
+              Yes. Use the plus and minus buttons on the cart page
+              to update the quantity.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does this website accept real payments?</summary>
+            <p>
+              No. This is a frontend demo. Checkout does not process
+              payments. Do not enter real card details.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          Apni<span>Shirt</span>
+        </a>
+
+        <p>Style for every day.</p>
+        <p>Demo store — sample products and prices.</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Shop</h2>
+        <ul>
+          <li><a href="shop.html">All Shirts</a></li>
+          <li><a href="shop.html?category=casual">Casual Shirts</a></li>
+          <li><a href="shop.html?category=formal">Formal Shirts</a></li>
+          <li><a href="shop.html?category=linen">Linen Shirts</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="cart.html">Your Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>Contact</h2>
+        <p>Contact details will be added here.</p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>Apni Shirt | HTML, CSS & JavaScript Project</p>
+      <a href="#top" id="backToTop">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- JS notifications -->
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+    hidden
+  ></div>
+</body>
+</html>
